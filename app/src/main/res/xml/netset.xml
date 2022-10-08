@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <!-- End AdColony / Smaato section -->
+
+    <domain-config cleartextTrafficPermitted="true">
+
+        <!-- For Meta Audience Network, this permits cleartext traffic to localhost: -->
+        <domain includeSubdomains="true">127.0.0.1</domain>
+        <!-- End Meta Audience Network section -->
+
+    </domain-config>
+    <!--    <domain-config cleartextTrafficPermitted="true">-->
+    <!--        <domain includeSubdomains="true">ow.njowoffer.com</domain>-->
+    <!--    </domain-config>-->
+<!--    <domain-config cleartextTrafficPermitted="true">-->
+<!--        <domain includeSubdomains="true">ow.shop-coupon.com</domain>-->
+<!--    </domain-config>-->
+</network-security-config>

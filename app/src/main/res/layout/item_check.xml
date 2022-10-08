@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dra_sign_unselect"
+    android:gravity="center"
+    android:id="@+id/item_sign"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/day"
+        android:text="day 1"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/img_sign"
+        android:background="@drawable/sign_icon"
+        android:layout_marginTop="8dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+    <TextView
+        android:id="@+id/points"
+        android:text="+1000"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/sign_bottom"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

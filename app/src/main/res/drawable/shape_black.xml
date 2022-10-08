@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/teal_700" />
+    <!--    <corners-->
+    <!--        android:bottomLeftRadius="16dp"//左下角的弧度-->
+    <!--        android:bottomRightRadius="16dp"右下角的弧度-->
+    <!--        android:topLeftRadius="16dp"左上角的弧度-->
+    <!--        android:topRightRadius="16dp"右上角的弧度-->
+    <!--        android:radius="16dp"/>-->
+    <corners
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="16dp" />
+    <gradient
+        android:startColor="#64665D"
+        android:endColor="#64665D" />
+</shape>

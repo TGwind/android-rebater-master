@@ -1,0 +1,158 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'applovin-quality-service'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'org.greenrobot.greendao'
+applovin {
+    apiKey "XM-TTIqpPFMo73SJ62T4_MmfoD8Uf8EISxN-FNPf1yD9pn4P7Fgwf5TI-5EefrwDezt_F655cOMP749lth0GlN"
+}
+apply plugin: 'com.google.firebase.firebase-perf'
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.rebater.cash.well.fun"
+        minSdk 23
+        targetSdk 30
+        versionCode 5
+        versionName "1.4"
+        multiDexEnabled true
+        setProperty("archivesBaseName", "rebater_rewards_v${versionName}")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    greendao {
+        schemaVersion 2    //数据库版本 ，
+        daoPackage 'com.rebater.cash.well.fun.green'    //可指定自动生成类的路径
+        targetGenDir 'src/main/java'
+    }
+//    ndkVersion "22.1.7171670"
+    buildToolsVersion '32.0.0'
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+//    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation fileTree(include: ['*.?ar'], dir: 'libs')
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
+    implementation 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+// for AdColony
+//    implementation 'com.openmediation.adapters:adcolony:2.6.0@aar'
+//    implementation 'com.adcolony:sdk:4.7.1'
+    // for Pangle
+//    implementation 'com.openmediation.adapters:tiktok:2.5.1@aar'
+//    implementation 'com.pangle.global:ads-sdk:4.1.1.2'
+    //布局注解器
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'org.testng:testng:6.9.6'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    implementation "org.greenrobot:eventbus:3.3.1"
+    //appsflyer归因
+//    implementation 'com.appsflyer:af-android-sdk:6.3.2'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    //分包
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //网络请求
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
+
+    // Import the Firebase BoM 谷歌登录
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+//    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    implementation 'com.google.firebase:firebase-messaging'
+
+
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation("com.github.bumptech.glide:okhttp3-integration:4.11.0") {
+        transitive = false
+    }
+
+//    implementation 'com.openmediation:om-android-sdk:2.6.3@aar'
+//    // for Vungle (Support S2S Bidding)
+//    implementation 'com.openmediation.adapters:vungle:2.5.0@aar'
+//    implementation 'com.vungle:publisher-sdk-android:6.10.3'
+
+    //inronsource
+//    implementation 'com.ironsource.sdk:mediationsdk:7.1.13.1'
+//    implementation 'com.openmediation.adapters:ironsource:2.5.0@aar'
+
+    // for AppLovin
+//    implementation 'com.openmediation.adapters:applovin:2.5.0@aar'
+//    implementation 'com.applovin:applovin-sdk:10.3.5'
+// for Tapjoy
+//    implementation 'com.openmediation.adapters:tapjoy:2.6.0@aar'
+//    implementation 'com.tapjoy:tapjoy-android-sdk:12.10.0@aar'
+
+//    implementation(name: 'adgatemediasdk', ext: 'aar')
+
+    implementation 'com.kochava.base:tracker:3.11.0' // Required
+    implementation 'com.kochava.base:tracker-network:3.11.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.1.0'
+//    implementation 'com.huawei.hms:ads-installreferrer:3.4.29.303'
+
+//    implementation 'com.facebook.android:audience-network-sdk:6.8.0'
+//    implementation 'com.openmediation.adapters:facebook:2.6.2@aar'
+    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.applovin.mediation:adcolony-adapter:+'
+//    implementation 'com.applovin.mediation:chartboost-adapter:+'
+//    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.applovin.mediation:ironsource-adapter:+'
+    implementation 'com.applovin.mediation:bytedance-adapter:+'
+    implementation 'com.applovin.mediation:tapjoy-adapter:+'
+    implementation 'com.applovin.mediation:vungle-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+    implementation 'com.applovin.mediation:amazon-tam-adapter:+'
+    implementation 'com.amazon.android:aps-sdk:+'
+    implementation files('libs/adgatemediasdk.aar')
+//    implementation 'com.huawei.hms:ads-identifier:3.4.29.303'
+
+//    // Required: Install Referrer
+//    implementation 'com.huawei.hms:ads-installreferrer:3.4.29.303'
+    //轮播
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    //滚动字符
+    implementation "com.github.YvesCheung.RollingText:RollingText:1.2.11"
+    //数据库
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'
+}

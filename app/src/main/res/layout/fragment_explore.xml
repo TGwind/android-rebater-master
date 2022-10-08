@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        appsrlEnablePreviewInEditMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMoreWhenContentNotFull="false"
+        app:srlEnablePreviewInEditMode="false"
+        app:srlFooterTranslationViewId="@+id/scrollView">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlAccentColor="@color/black"
+            app:srlPrimaryColor="@color/background"
+            app:srlTextFailed="@string/header_failed"
+            app:srlTextFinish="@string/header_finish"
+            app:srlTextLoading="@string/header_loading"
+            app:srlTextPulling="@string/header_pulling"
+            app:srlTextRefreshing="@string/header_refreshing"
+            app:srlTextRelease="@string/header_release"
+            app:srlTextSecondary="@string/header_secondary"
+            app:srlTextUpdate="@string/header_update" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/first_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/background" />
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

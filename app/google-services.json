@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648170384963",
+    "project_id": "rebater-56753",
+    "storage_bucket": "rebater-56753.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648170384963:android:2923561dd7baddbf76eef6",
+        "android_client_info": {
+          "package_name": "com.rebater.cash.well.fun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648170384963-eip6oj1or4cs15f4r7h8lbqfih081qrh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3s2Akx83xRAMrx60UEVIjob-h9QzhTfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648170384963-eip6oj1or4cs15f4r7h8lbqfih081qrh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
